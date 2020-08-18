@@ -1,0 +1,9 @@
+:host{
+    background-color: white;
+    border:1px solid black;
+    height: 50px;
+}
+
+.controls-body{
+    text-align: center;
+}

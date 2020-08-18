@@ -10,6 +10,8 @@ import { PlayerComponent } from './routes/youTube/player/player.component';
 import { PlayerBodyComponent } from './routes/youTube/player-body/player-body.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes/app.routes';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,8 +19,9 @@ import { appRoutes } from './routes/app.routes';
 
   ],
   imports: [
-    BrowserModule,SpaModule,
+    HttpClientModule,BrowserModule,SpaModule,
     AppRoutingModule,
+    
     RouterModule.forRoot(appRoutes)
     
   ],

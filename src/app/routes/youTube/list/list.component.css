@@ -1,0 +1,16 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height:500px;
+    border: 1px solid black;
+    padding: 5px;
+    overflow-y: scroll;
+
+}
+
+.pad{
+    margin-top: 5px;
+    padding:5px;
+    border:1px solid black;
+}

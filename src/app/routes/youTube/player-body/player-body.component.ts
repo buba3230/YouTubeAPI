@@ -3,6 +3,7 @@ import { ControlsComponent } from '../controls/controls.component';
 import { ListComponent } from '../list/list.component';
 import { PlayerComponent } from '../player/player.component';
 
+
 @Component({
   selector: 'app-player-body',
   templateUrl: './player-body.component.html',
