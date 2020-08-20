@@ -1,3 +1,9 @@
+1. Clone this repository
+2. npm install
+3. Input your youTube API key in youtube.service.ts (...LINE 11...)
+3. ng serve
+4. Navigate to `http://localhost:4200/`
+
 # Task1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
