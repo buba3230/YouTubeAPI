@@ -1,6 +1,6 @@
 
-
-    <div *ngFor="let video of videos">
+<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">ADD</button>
+    <div *ngFor="let video of videos;">
         <div class="row pad no-gutters">
             <div class="col-3">
                 <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="...">
@@ -11,4 +11,36 @@
             
         </div>
     </div>
+
+    <ng-template #mymodal let-modal>
+        <form novalidate (ngSubmit)='onSubmit(settingsForm)' #settingsForm="ngForm">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Video Play Settings</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="chanel">Chanel name</label>
+                    <input type="text" name="chanel" id="chanel" required autocomplete="off" placeholder="Input chanel name"
+                    ngModel #chanel = 'ngModel' class="form-control">
+                    <div class="alert alert-danger" [hidden]='chanel.valid || chanel.pristine'>
+                        Please enter chanel name
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="qty">Count of videos</label>
+                    <input type="text" name="qty" id="qty" required autocomplete="off" placeholder="Input count"
+                    ngModel #qty = 'ngModel' class="form-control">
+                    <div class="alert alert-danger" [hidden]='qty.valid || qty.pristine'>
+                        Please enter count of videos
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button [disabled]='settingsForm.invalid' type="submit" class="btn btn-primary" data-dismiss="modal">Save</button>
+            </div>
+        </form>
+    </ng-template>
     

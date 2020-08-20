@@ -11,7 +11,9 @@ import { PlayerBodyComponent } from './routes/youTube/player-body/player-body.co
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes/app.routes';
 import { HttpClientModule } from '@angular/common/http';
-import {DataService} from '../app/routes/youTube/data.service'
+import {DataService} from '../app/routes/youTube/data.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,8 @@ import {DataService} from '../app/routes/youTube/data.service'
   ],
   imports: [
     HttpClientModule,BrowserModule,SpaModule,
-    AppRoutingModule,
-    
+    FormsModule, ReactiveFormsModule,
+    AppRoutingModule,NgbModule,
     RouterModule.forRoot(appRoutes)
     
   ],

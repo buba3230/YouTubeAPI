@@ -64,8 +64,12 @@ export class PlayerComponent implements OnInit {
    if (this.player) {
     if (this.stateVideo=='Play')
     {
+      if (!this.videoID) {
+        alert('You must select video...');
+      }
       this.player.playVideo();
         console.log("Play");
+
     }
     if (this.stateVideo=='Pause')
     {
