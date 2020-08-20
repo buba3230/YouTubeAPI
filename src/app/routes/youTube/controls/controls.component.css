@@ -5,5 +5,10 @@
 }
 
 .controls-body{
+    padding: 5px;
     text-align: center;
+}
+
+.myBtn{
+    margin-left:5px;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-controls',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+  }
+
+  changeState(st) {
+    this.data.changeState(st);
   }
 
 }

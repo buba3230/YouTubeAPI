@@ -11,7 +11,7 @@ import { PlayerBodyComponent } from './routes/youTube/player-body/player-body.co
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes/app.routes';
 import { HttpClientModule } from '@angular/common/http';
-
+import {DataService} from '../app/routes/youTube/data.service'
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(appRoutes)
     
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

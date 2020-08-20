@@ -5,10 +5,10 @@
             <div class="col-3">
                 <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="...">
             </div>
-            <div class="col-8">
-                <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
-                </a>
+            <div class="col-8" (click)="changeVideo(video.id.videoId)">
+                <p>{{video.snippet.title}}</p>
             </div>
             
         </div>
     </div>
+    
